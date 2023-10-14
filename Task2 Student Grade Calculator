@@ -1,0 +1,44 @@
+//This is a java program to show the Grade of student according to their marks
+import java.util.*;
+public class GradeCalculator {
+    public static void main(String[]args){
+        double totalmarks = 0.0;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a Number of Subject");
+        int subject = sc.nextInt();
+        for(int i =1;i<=subject;i++){
+            System.out.println("Enter your marks obtained in subject "+i+" :");
+            double marks = sc.nextDouble();
+            totalmarks = totalmarks + marks;
+
+        }
+
+        System.out.println("Totat Marks = "+totalmarks);
+
+        double AveragePercentage = (totalmarks/(subject*100))*100;
+        System.out.println("Total Average Percentage = "+AveragePercentage);
+
+        if(AveragePercentage>95.0){
+            System.out.println("Grade  O -> Outstanding  ");
+        }
+        else if(AveragePercentage>75.0){
+            System.out.println(" Grade A+ -> Excellent ");
+        }
+        else if(AveragePercentage>65.0){
+            System.out.println(" Grade A -> Very Good");
+        }
+        else if(AveragePercentage>55.0){
+            System.out.println("Grade B+ -> Good");
+        }
+        else if(AveragePercentage>45){
+            System.out.println(" Grade C -> Average ");
+        }
+        else if(AveragePercentage>=35){
+            System.out.println(" Grade P  ->  Pass");
+        }
+        else{
+            System.out.println("Grade F ->  Fail");
+        }
+    }
+
+}
